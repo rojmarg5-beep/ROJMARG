@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 
 const Footer: React.FC = () => {
@@ -109,28 +110,28 @@ const Footer: React.FC = () => {
             </h4>
             <ul className="space-y-3 md:space-y-4 text-xs md:text-sm font-medium uppercase tracking-wide text-primary-foreground">
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-primary-foreground/70 transition-colors"
                 >
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-primary-foreground/70 transition-colors"
                 >
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="#"
                   className="hover:text-primary-foreground/70 transition-colors"
                 >
                   Cookie Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -142,7 +143,7 @@ const Footer: React.FC = () => {
             </h4>
             <div className="space-y-2 text-xs md:text-sm text-primary-foreground/80">
               <p>India (HQ)</p>
-              <p className="break-all">info@devbhoomiglobalservices.com</p>
+              <p className="break-all">info@rojmarg.com</p>
               <p>+91 9084017662</p>
             </div>
           </div>

@@ -4,6 +4,11 @@ import "./globals.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import {
+  DEFAULT_METADATA,
+  ORGANIZATION_SCHEMA,
+  WEBSITE_SCHEMA,
+} from "@/lib/seo.config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,11 +20,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Devbhoomi Global Services - Connecting Talent with Opportunities",
-  description:
-    "We connect skilled professionals with meaningful roles across banking and financial sectors. Expert recruitment and staffing solutions in Haldwani.",
-};
+export const metadata: Metadata = DEFAULT_METADATA;
 
 export default function RootLayout({
   children,
@@ -38,6 +39,19 @@ export default function RootLayout({
           rel="stylesheet"
         />
         <link rel="icon" href="/favicon.ico" />
+        {/* JSON-LD Structured Data for Rich Search Results */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(ORGANIZATION_SCHEMA),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(WEBSITE_SCHEMA),
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
